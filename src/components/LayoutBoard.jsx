@@ -1,13 +1,15 @@
-// src/components/LayoutBoard.jsx
-import { useAppStore } from '../store/useAppStore';
-import "../styles/layout-board.css"
+import "../styles/layout-board.css";
+import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 
-export default function LayoutBoard() {
-  const { layout } = useAppStore();
+export const LayoutBoard = () => {
+  const { store, dispatch } = useGlobalReducer();
 
   return (
-    <div className="layout" >
-
+    <div className="layout-board">
+      <div className={`layout-content ${store.currentClasses}`}>
+        {/* Aquí irán los elementos visuales */}
+        <div className="box">Elemento</div>
+      </div>
     </div>
   );
-}
+};
