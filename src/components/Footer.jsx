@@ -1,11 +1,11 @@
+import "../styles/footer.css"
+
 export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center bg-dark navbar-dark">
-		<p>
-			Check the <a target="_blank" href="https://4geeks.com/docs/start/start-react-advanced-project">template documentation</a> <i className="fa-solid fa-file"></i> for help.
-		</p>
-		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
-		</p>
-	</footer>
+    <footer className="footer mt-auto py-3 text-center bg-dark">
+        <p>
+            Made with <i className="fa fa-heart text-danger" /> by{" "}
+            <a href="http://www.4geeksacademy.com" target="_blank" rel="noopener noreferrer">4Geeks Academy</a> and 
+            <a href="https://github.com/edslogia" target="_blank" rel="noopener noreferrer"> edslogia</a>
+        </p>
+    </footer>
 );

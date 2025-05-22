@@ -11,8 +11,6 @@ export default function storeReducer(store, action = {}) {
         ...store,
         currentClasses: action.payload,
       };
-
-    // otras acciones...
     default:
       return store;
   }
