@@ -1,5 +1,6 @@
 import React from "react";
 import useGlobalReducer from "../hooks/useGlobalReducer";
+import "../styles/class-input.css";
 
 export const ClassInput = () => {
   const { dispatch, store } = useGlobalReducer();
@@ -25,13 +26,7 @@ export const ClassInput = () => {
         placeholder="Ej: d-flex justify-content-center"
         value={store.currentClasses}
         onChange={handleChange}
-        style={{
-          width: "100%",
-          padding: "0.5rem",
-          fontSize: "1rem",
-          borderRadius: "4px",
-          border: "1px solid #ccc",
-        }}
+        className="input-1"
       />
     </div>
   );
