@@ -13,20 +13,17 @@ export const ClassInput = () => {
   };
 
   return (
-    <div style={{ margin: "1rem auto", width: "80%", textAlign: "center" }}>
-      <label
-        htmlFor="classInput"
-        style={{ display: "block", marginBottom: "0.5rem", fontWeight: "bold" }}
-      >
+    <div>
+      <label htmlFor="classInput" className="label-input">
         Escribe clases de Bootstrap:
       </label>
       <input
         id="classInput"
+        className="input-1"
         type="text"
         placeholder="Ej: d-flex justify-content-center"
         value={store.currentClasses}
         onChange={handleChange}
-        className="input-1"
       />
     </div>
   );
