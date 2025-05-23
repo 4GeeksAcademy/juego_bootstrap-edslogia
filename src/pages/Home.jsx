@@ -17,8 +17,8 @@ export const Home = () => {
         </div>
         <div className="col-4">
           <BootstrapActions>
-            {buttonClasses.map((classToSelect) => {
-              return <Button classToSelect={classToSelect} />;
+            {buttonClasses.map((classToSelect, index) => {
+              return <Button key={index} classToSelect={classToSelect} />;
             })}
           </BootstrapActions>
         </div>

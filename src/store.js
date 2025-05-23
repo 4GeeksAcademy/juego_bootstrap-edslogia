@@ -9,7 +9,7 @@ export default function storeReducer(store, action = {}) {
     case "SET_CURRENT_CLASSES":
       return {
         ...store,
-        currentClasses: action.payload,
+        classToSelect: action.payload,
       };
     default:
       return store;
