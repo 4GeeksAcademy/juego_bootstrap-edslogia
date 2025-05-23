@@ -6,7 +6,7 @@ export const LayoutBoard = () => {
 
   return (
     <div className="layout-board ">
-        <div className={`box ${store.currentClasses}`}>Elemento</div>
+        <div className="box">Box</div>
     </div>
   );
 };
