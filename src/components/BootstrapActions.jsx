@@ -5,7 +5,7 @@ export const BootstrapActions = ({children}) => {
   const { store, dispatch } = useGlobalReducer();
 
   return (
-    <div className="bootstrap-actions">
+    <div className="bootstrap-actions d-flex flex-wrap">
       {children}
     </div>
   );
