@@ -8,7 +8,7 @@ export const ButtonClassDinamic = ({ classToSelect }) => {
   const handleClick = () => {
     console.log(classToSelect);
     dispatch({
-      type: "SET_CURRENT_CLASSES",
+      type: "SET_CURRENT_CLASSES_DINAMIC",
       payload: classToSelect,
     });
   };

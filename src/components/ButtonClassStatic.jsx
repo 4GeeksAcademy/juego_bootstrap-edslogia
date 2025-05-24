@@ -6,9 +6,8 @@ export const ButtonClassStatic = ({ classToSelect }) => {
   const { dispatch, store } = useGlobalReducer();
 
   const handleClick = () => {
-    console.log(classToSelect);
     dispatch({
-      type: "SET_CURRENT_CLASSES",
+      type: "SET_CURRENT_CLASSES_STATIC",
       payload: classToSelect,
     });
   };

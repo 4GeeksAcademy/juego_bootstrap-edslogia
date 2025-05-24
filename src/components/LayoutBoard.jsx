@@ -5,7 +5,7 @@ export const LayoutBoard = () => {
   const { store, dispatch } = useGlobalReducer();
 
   return (
-    <div className={`layout-board d-flex ${store.classToSelect}`}>
+    <div className={`layout-board ${store.classToSelectStatic} ${store.classToSelectDinamic}`}>
       <div className="box">Box</div>
       <div className="box">Box</div>
       <div className="box">Box</div>

@@ -19,18 +19,14 @@ export const Home = () => {
           <LayoutBoard />
         </div>
         <div className="col-4">
-          <LayoutActions>
-            {flex.map((classToSelect, index) => {
-              return (
-                <ButtonClassStatic key={index} classToSelect={classToSelect} />
-              );
-            })}
-            {flexAlign.map((classToSelect, index) => {
-              return (
-                <ButtonClassDinamic key={index} classToSelect={classToSelect} />
-              );
-            })}
-          </LayoutActions>
+          <LayoutActions
+            staticButtons={flex.map((classToSelect, index) => (
+              <ButtonClassStatic key={index} classToSelect={classToSelect} />
+            ))}
+            dinamicButtons={flexAlign.map((classToSelect, index) => (
+              <ButtonClassDinamic key={index} classToSelect={classToSelect} />
+            ))}
+          />
         </div>
       </div>
     </div>

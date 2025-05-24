@@ -1,15 +1,22 @@
 export const initialStore = () => {
   return {
-    currentClasses: "",
+    classToSelectStatic: "",
+    classToSelectDinamic: "",
   };
 };
 
 export default function storeReducer(store, action = {}) {
   switch (action.type) {
-    case "SET_CURRENT_CLASSES":
+    case "SET_CURRENT_CLASSES_STATIC":
       return {
         ...store,
-        classToSelect: action.payload,
+        classToSelectStatic: action.payload,
+      };
+
+    case "SET_CURRENT_CLASSES_DINAMIC":
+      return {
+        ...store,
+        classToSelectDinamic: action.payload,
       };
     default:
       return store;
