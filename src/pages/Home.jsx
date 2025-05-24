@@ -1,13 +1,16 @@
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import { LayoutBoard } from "../components/LayoutBoard.jsx";
 import { AppConfig } from "../config/config.js";
-import { Button } from "../components/ButtonClass.jsx";
-import { BootstrapActions } from "../components/BootstrapActions.jsx";
+import { ButtonClassStatic } from "../components/ButtonClassStatic.jsx";
+import { ButtonClassDinamic } from "../components/ButtonClassDinamic.jsx";
+import { LayoutActions } from "../components/LayoutActions.jsx";
 
 export const Home = () => {
   const { store, dispatch } = useGlobalReducer();
-  const buttonClasses = AppConfig.classFlex;
-  console.log(buttonClasses);
+  const flexAlign = AppConfig.classFlex.groups.align;
+  const flexJustify = AppConfig.classFlex.groups.justify;
+  const flexDirection = AppConfig.classFlex.groups.direction;
+  const flex = AppConfig.classFlex.static;
 
   return (
     <div className="">
@@ -16,11 +19,18 @@ export const Home = () => {
           <LayoutBoard />
         </div>
         <div className="col-4">
-          <BootstrapActions>
-            {buttonClasses.map((classToSelect, index) => {
-              return <Button key={index} classToSelect={classToSelect} />;
+          <LayoutActions>
+            {flex.map((classToSelect, index) => {
+              return (
+                <ButtonClassStatic key={index} classToSelect={classToSelect} />
+              );
             })}
-          </BootstrapActions>
+            {flexAlign.map((classToSelect, index) => {
+              return (
+                <ButtonClassDinamic key={index} classToSelect={classToSelect} />
+              );
+            })}
+          </LayoutActions>
         </div>
       </div>
     </div>

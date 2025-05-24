@@ -2,7 +2,7 @@ import React from "react";
 import useGlobalReducer from "../hooks/useGlobalReducer";
 import "../styles/class-input.css";
 
-export const Button = ({ classToSelect }) => {
+export const ButtonClassDinamic = ({ classToSelect }) => {
   const { dispatch, store } = useGlobalReducer();
 
   const handleClick = () => {
