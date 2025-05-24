@@ -1,4 +1,6 @@
-.layout-actions {
+.layout-actions,
+.layout-actions-top,
+.layout-actions-bottom {
   border: 2px dashed #ccc;
   background-color: #f8f9fa;
 }
@@ -6,13 +8,9 @@
 .layout-actions-top {
   width: 400px;
   height: 100px;
-  border: 2px dashed #ccc;
-  background-color: #f8f9fa;
 }
 
 .layout-actions-bottom {
   width: 400px;
   height: 300px;
-  border: 2px dashed #ccc;
-  background-color: #f8f9fa;
 }
